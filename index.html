@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<!--La Base-->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Antoine®</title>
+    <meta name="description" content="Antoine G® is a showroom of 3D Art.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <meta property="og:title" content="Antoine G®" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.Antoine.co" />
+    <meta property="og:image" content="http://www.Antoine.co/Logo.jpg" />
+    <meta property="og:description" content="Antoine G® is a personnal website whre i exhibit my creation in better quality." />
+
+
+<!--Link CSS/JS/Sources/Fonts-->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="logo officiel.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo officiel.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo officiel.jpg">
+    <link rel="manifest" href="logo officiel.jpg">
+    <link rel="mask-icon" href="logo officiel.jpg" color="#1544c0">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="style.css" />
+    <meta name="description"  content="Antoine G® is a showroom of 3D Art." />
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0c87a70838.js" crossorigin="anonymous"></script>
+    
+
+</head>
+
+<body>
+
+  <!--Lien"Start now"-->
+  
+
+ <div class="container">
+
+    <h2><span>3D</span><br>showroom</h2>
+    
+      <div class="btn">
+        
+
+        <a href="#">START NOW</a>
+          
+        
+      </div>
+
+    <div class="media">
+
+      
+      <!--Dark mode Button-->
+
+
+      <div class="container">
+        
+        <div class="toggle-container">
+            <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+        </div>
+      
+      <!--Contact Button-->
+
+
+<ul>
+
+  <li><a href="https://www.instagram.com/antoine_gtier/" target="_BLANK"><i class="fa fa-instagram"aria-hidden="true"></i></a></li>
+
+</ul>
+
+    </div>
+
+
+  <!--Blocks Animation-->
+
+ </div>
+ <script src="anime.min.js"></script>
+ <script>
+const container = document.querySelector('.container')
+for (var i = 0; i <= 100; i++){
+const blocks = document.createElement('div');
+blocks.classList.add('block');
+container.appendChild(blocks);
+}
+
+function animateBlocks(){
+   anime({
+     targets: '.block',
+     translateX: function(){
+    return anime.random(-200,200);
+      },
+      
+     translateY: function(){
+    return anime.random(-600,600);
+      },
+      
+      scale: function(){
+    return anime.random(1,5);
+      },
+    
+    easing:  'linear',
+    duration: 3000,
+    delay: anime.stagger(10),
+    complete: animateBlocks,
+    })
+}
+  
+    animateBlocks()
+  </script>
+
+  
+
+ </body>
+</html>
+
+
